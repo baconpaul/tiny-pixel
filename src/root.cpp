@@ -186,11 +186,13 @@ bool Root::moveFocus(Input dir)
         setFocus(cs.front());
         return focus != nullptr;
     }
+    cs.erase(std::remove(cs.begin(), cs.end(), focus), cs.end());
     std::vector<Rect> rs;
     rs.reserve(cs.size());
     for (auto *c : cs)
         rs.push_back(c->boundsInRoot());
-    const int best = findNeighbour(focus->boundsInRoot(), rs, dir);
+    const Rect at = focus->boundsInRoot();
+    const int best = findNeighbour(focus->focusAnchor().translated(at.x, at.y), rs, dir);
     if (best < 0)
         return false;
     setFocus(cs[size_t(best)]);

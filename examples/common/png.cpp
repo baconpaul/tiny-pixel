@@ -7,9 +7,9 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
 
-namespace tpx::test
+namespace tpx::png
 {
-bool writePng(const Image &img, const std::string &path)
+bool write(const Image &img, const std::string &path)
 {
     auto parent = std::filesystem::path(path).parent_path();
     if (!parent.empty())
@@ -27,4 +27,4 @@ bool writePng(const Image &img, const std::string &path)
     return stbi_write_png(path.c_str(), img.width(), img.height(), 3, rgb.data(),
                           img.width() * 3) != 0;
 }
-} // namespace tpx::test
+} // namespace tpx::png

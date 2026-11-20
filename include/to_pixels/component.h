@@ -44,6 +44,8 @@ class Component
     virtual void paint(Canvas &) {}
     virtual void paintFocus(Canvas &c);
     virtual bool onInput(const InputEvent &) { return false; }
+    // where d-pad navigation leaves from, in local coordinates; a tall list uses its selection
+    virtual Rect focusAnchor() { return {0, 0, bnds.w, bnds.h}; }
     virtual void focusChanged(bool) { repaint(); }
 
   protected:

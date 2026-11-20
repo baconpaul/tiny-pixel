@@ -52,7 +52,7 @@ TEST_CASE("canvas primitives", "[.shots]")
         c.line({10.f + float(i) * 58.f, 300}, {50.f + float(i) * 58.f, 300.f - float(i) * 6.f},
                1.f + float(i) * 0.5f, txt0);
 
-    REQUIRE(tpx::test::writePng(img, "build/shots/canvas.png"));
+    REQUIRE(tpx::png::write(img, "build/shots/canvas.png"));
 }
 
 #include "to_pixels/default_font.h"
@@ -81,5 +81,46 @@ TEST_CASE("text at sizes", "[.shots]")
     c.drawText(r, {160, 200, 140, 40}, "Centre", txt0, tpx::Align::Centre);
     c.fillRect({310, 200, 140, 40}, bg2);
     c.drawText(r, {310, 200, 140, 40}, "Right", txt0, tpx::Align::Right);
-    REQUIRE(tpx::test::writePng(img, "build/shots/text.png"));
+    REQUIRE(tpx::png::write(img, "build/shots/text.png"));
+}
+
+#include "to_pixels/to_pixels.h"
+
+TEST_CASE("widgets", "[.shots]")
+{
+    auto reg = tpx::fonts::jetbrainsMonoRegular();
+    auto bold = tpx::fonts::jetbrainsMonoBold();
+    tpx::Font f(reg.data(), reg.size(), 15), fs(reg.data(), reg.size(), 12),
+        fv(bold.data(), bold.size(), 13);
+    tpx::Root root(640, 300);
+    root.theme().font = &f;
+    root.theme().fontSmall = &fs;
+    root.theme().fontValue = &fv;
+
+    tpx::Knob k[6];
+    const float vals[6] = {0.f, 0.3f, 1.f, 0.2f, 0.5f, 0.8f};
+    for (int i = 0; i < 6; ++i)
+    {
+        k[i].setBounds({10 + i * 100, 10, 90, 120});
+        k[i].setLabel(i < 3 ? "Cutoff" : "Env Amt");
+        k[i].setBipolar(i >= 3);
+        k[i].setValue(vals[i]);
+        root.addChild(&k[i]);
+    }
+    tpx::Slider h, v;
+    h.setBounds({10, 150, 400, 50});
+    h.setLabel("Volume");
+    h.setValue(0.7f);
+    v.setOrientation(tpx::Slider::Orientation::Vertical);
+    v.setBounds({430, 140, 80, 150});
+    v.setLabel("Detune");
+    v.setBipolar(true);
+    v.setValue(0.65f);
+    root.addChild(&h);
+    root.addChild(&v);
+    root.setFocus(&k[1]);
+
+    tpx::Image img(640, 300);
+    root.render(img.surface(), 0);
+    REQUIRE(tpx::png::write(img, "build/shots/widgets.png"));
 }
