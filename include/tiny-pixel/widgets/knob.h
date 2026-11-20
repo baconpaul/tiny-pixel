@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_WIDGETS_KNOB_H
-#define TO_PIXELS_WIDGETS_KNOB_H
+#ifndef TINY_PIXEL_WIDGETS_KNOB_H
+#define TINY_PIXEL_WIDGETS_KNOB_H
 
 #include "value_control.h"
 

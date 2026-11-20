@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "to_pixels/canvas.h"
+#include "tiny-pixel/canvas.h"
 
 TEST_CASE("fillRect writes opaque colour inside and nothing outside", "[canvas]")
 {

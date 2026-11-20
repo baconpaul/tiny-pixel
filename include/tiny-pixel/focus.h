@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_FOCUS_H
-#define TO_PIXELS_FOCUS_H
+#ifndef TINY_PIXEL_FOCUS_H
+#define TINY_PIXEL_FOCUS_H
 
 #include <vector>
 

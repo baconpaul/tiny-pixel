@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_COLOR_H
-#define TO_PIXELS_COLOR_H
+#ifndef TINY_PIXEL_COLOR_H
+#define TINY_PIXEL_COLOR_H
 
 #include <algorithm>
 #include <cstdint>

@@ -1,4 +1,4 @@
-#include "to_pixels/damage.h"
+#include "tiny-pixel/damage.h"
 
 namespace tpx
 {

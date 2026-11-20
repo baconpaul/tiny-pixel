@@ -2,9 +2,9 @@
 
 #include <string>
 
-#include "to_pixels/canvas.h"
-#include "to_pixels/default_font.h"
-#include "to_pixels/font.h"
+#include "tiny-pixel/canvas.h"
+#include "tiny-pixel/default_font.h"
+#include "tiny-pixel/font.h"
 
 static tpx::Font mono(float px)
 {

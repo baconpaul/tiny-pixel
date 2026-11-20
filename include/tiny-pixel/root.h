@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_ROOT_H
-#define TO_PIXELS_ROOT_H
+#ifndef TINY_PIXEL_ROOT_H
+#define TINY_PIXEL_ROOT_H
 
 #include <array>
 #include <cstdint>

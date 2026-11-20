@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_GEOMETRY_H
-#define TO_PIXELS_GEOMETRY_H
+#ifndef TINY_PIXEL_GEOMETRY_H
+#define TINY_PIXEL_GEOMETRY_H
 
 #include <algorithm>
 

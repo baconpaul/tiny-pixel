@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_SURFACE_H
-#define TO_PIXELS_SURFACE_H
+#ifndef TINY_PIXEL_SURFACE_H
+#define TINY_PIXEL_SURFACE_H
 
 #include <cstdint>
 #include <vector>

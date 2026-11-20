@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "to_pixels/widgets/preset_list.h"
+#include "tiny-pixel/widgets/preset_list.h"
 
 static std::vector<std::string> names(int n)
 {
@@ -63,8 +63,8 @@ TEST_CASE("edit chooses, and an empty list is harmless", "[presets]")
     REQUIRE(chosen == 3);
 }
 
-#include "to_pixels/root.h"
-#include "to_pixels/widgets/knob.h"
+#include "tiny-pixel/root.h"
+#include "tiny-pixel/widgets/knob.h"
 
 TEST_CASE("leaving the list sideways goes to the control level with the selection", "[presets]")
 {

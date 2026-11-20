@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_TO_PIXELS_H
-#define TO_PIXELS_TO_PIXELS_H
+#ifndef TINY_PIXEL_TINY_PIXEL_H
+#define TINY_PIXEL_TINY_PIXEL_H
 
 #include "canvas.h"
 #include "color.h"

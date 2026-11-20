@@ -1,4 +1,4 @@
-#include "to_pixels/default_font.h"
+#include "tiny-pixel/default_font.h"
 
 extern const unsigned char tpx_font_jbm_regular[];
 extern const unsigned int tpx_font_jbm_regular_size;

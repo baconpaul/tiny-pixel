@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_COMPONENT_H
-#define TO_PIXELS_COMPONENT_H
+#ifndef TINY_PIXEL_COMPONENT_H
+#define TINY_PIXEL_COMPONENT_H
 
 #include <vector>
 

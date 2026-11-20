@@ -1,10 +1,10 @@
-#include "to_pixels/widgets/slider.h"
+#include "tiny-pixel/widgets/slider.h"
 
 #include <algorithm>
 
-#include "to_pixels/canvas.h"
-#include "to_pixels/font.h"
-#include "to_pixels/root.h"
+#include "tiny-pixel/canvas.h"
+#include "tiny-pixel/font.h"
+#include "tiny-pixel/root.h"
 
 namespace tpx
 {

@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_WIDGETS_SLIDER_H
-#define TO_PIXELS_WIDGETS_SLIDER_H
+#ifndef TINY_PIXEL_WIDGETS_SLIDER_H
+#define TINY_PIXEL_WIDGETS_SLIDER_H
 
 #include "value_control.h"
 

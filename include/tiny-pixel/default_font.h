@@ -1,9 +1,9 @@
-#ifndef TO_PIXELS_DEFAULT_FONT_H
-#define TO_PIXELS_DEFAULT_FONT_H
+#ifndef TINY_PIXEL_DEFAULT_FONT_H
+#define TINY_PIXEL_DEFAULT_FONT_H
 
 #include <span>
 
-// link to_pixels::default_font for these
+// link tiny-pixel::default-font for these
 namespace tpx::fonts
 {
 std::span<const unsigned char> jetbrainsMonoRegular();

@@ -1,4 +1,4 @@
-#include "to_pixels/canvas.h"
+#include "tiny-pixel/canvas.h"
 
 #include <algorithm>
 #include <cmath>

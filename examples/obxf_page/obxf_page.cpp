@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <string>
 
-#include "to_pixels/default_font.h"
+#include "tiny-pixel/default_font.h"
 
 namespace
 {

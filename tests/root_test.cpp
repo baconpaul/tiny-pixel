@@ -1,7 +1,7 @@
 #include "catch2.hpp"
 
-#include "to_pixels/canvas.h"
-#include "to_pixels/root.h"
+#include "tiny-pixel/canvas.h"
+#include "tiny-pixel/root.h"
 
 namespace
 {

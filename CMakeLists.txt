@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.21)
-project(to_pixels VERSION 0.1.0 LANGUAGES CXX)
+project(tiny-pixel VERSION 0.1.0 LANGUAGES CXX)
 
-option(TO_PIXELS_BUILD_TESTS "Build the to_pixels tests" ${PROJECT_IS_TOP_LEVEL})
-option(TO_PIXELS_BUILD_EXAMPLES "Build the to_pixels examples" ${PROJECT_IS_TOP_LEVEL})
+option(TINY_PIXEL_BUILD_TESTS "Build the tiny-pixel tests" ${PROJECT_IS_TOP_LEVEL})
+option(TINY_PIXEL_BUILD_EXAMPLES "Build the tiny-pixel examples" ${PROJECT_IS_TOP_LEVEL})
 
 if (PROJECT_IS_TOP_LEVEL)
     set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -18,7 +18,7 @@ function(tpx_warnings target)
     endif ()
 endfunction()
 
-add_library(to_pixels STATIC
+add_library(tiny-pixel STATIC
     src/surface.cpp
     src/canvas.cpp
     src/canvas_shapes.cpp
@@ -33,33 +33,33 @@ add_library(to_pixels STATIC
     src/widgets/label.cpp
     src/widgets/preset_list.cpp
 )
-add_library(to_pixels::to_pixels ALIAS to_pixels)
-target_include_directories(to_pixels PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_include_directories(to_pixels SYSTEM PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/libs/stb)
-target_compile_features(to_pixels PUBLIC cxx_std_20)
-tpx_warnings(to_pixels)
+add_library(tiny-pixel::tiny-pixel ALIAS tiny-pixel)
+target_include_directories(tiny-pixel PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(tiny-pixel SYSTEM PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/libs/stb)
+target_compile_features(tiny-pixel PUBLIC cxx_std_20)
+tpx_warnings(tiny-pixel)
 
 # optional: jetbrains mono (OFL), so an app need not ship its own font
-add_library(to_pixels_default_font STATIC src/default_font.cpp)
-add_library(to_pixels::default_font ALIAS to_pixels_default_font)
-tpx_embed(to_pixels_default_font tpx_font_jbm_regular
+add_library(tiny-pixel-default-font STATIC src/default_font.cpp)
+add_library(tiny-pixel::default-font ALIAS tiny-pixel-default-font)
+tpx_embed(tiny-pixel-default-font tpx_font_jbm_regular
     ${CMAKE_CURRENT_SOURCE_DIR}/resources/fonts/JetBrainsMono-Regular.ttf)
-tpx_embed(to_pixels_default_font tpx_font_jbm_bold
+tpx_embed(tiny-pixel-default-font tpx_font_jbm_bold
     ${CMAKE_CURRENT_SOURCE_DIR}/resources/fonts/JetBrainsMono-Bold.ttf)
-target_link_libraries(to_pixels_default_font PUBLIC to_pixels)
+target_link_libraries(tiny-pixel-default-font PUBLIC tiny-pixel)
 
-if (TO_PIXELS_BUILD_TESTS OR TO_PIXELS_BUILD_EXAMPLES)
-    # png writing for shots, never part of to_pixels itself
+if (TINY_PIXEL_BUILD_TESTS OR TINY_PIXEL_BUILD_EXAMPLES)
+    # png writing for shots, never part of tiny-pixel itself
     add_library(tpx-png STATIC examples/common/png.cpp)
     target_include_directories(tpx-png PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/examples/common)
     target_include_directories(tpx-png SYSTEM PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/libs/stb)
-    target_link_libraries(tpx-png PUBLIC to_pixels)
+    target_link_libraries(tpx-png PUBLIC tiny-pixel)
 endif ()
 
-if (TO_PIXELS_BUILD_EXAMPLES)
+if (TINY_PIXEL_BUILD_EXAMPLES)
     add_library(tpx-obxf-page STATIC examples/obxf_page/obxf_page.cpp)
     target_include_directories(tpx-obxf-page PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/examples/obxf_page)
-    target_link_libraries(tpx-obxf-page PUBLIC to_pixels_default_font)
+    target_link_libraries(tpx-obxf-page PUBLIC tiny-pixel-default-font)
     tpx_warnings(tpx-obxf-page)
 
     add_executable(obxf_shots examples/obxf_page/shots.cpp)
@@ -67,8 +67,8 @@ if (TO_PIXELS_BUILD_EXAMPLES)
     tpx_warnings(obxf_shots)
 endif ()
 
-if (TO_PIXELS_BUILD_TESTS)
-    add_executable(to_pixels_tests EXCLUDE_FROM_ALL
+if (TINY_PIXEL_BUILD_TESTS)
+    add_executable(tiny-pixel-tests EXCLUDE_FROM_ALL
         tests/test_main.cpp
         tests/canvas_test.cpp
         tests/font_test.cpp
@@ -79,12 +79,12 @@ if (TO_PIXELS_BUILD_TESTS)
         tests/preset_list_test.cpp
         tests/shots_test.cpp
     )
-    target_include_directories(to_pixels_tests SYSTEM PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/libs/catch2)
-    if (TO_PIXELS_BUILD_EXAMPLES)
-        target_sources(to_pixels_tests PRIVATE tests/obxf_page_test.cpp)
-        target_link_libraries(to_pixels_tests PRIVATE tpx-obxf-page tpx-png)
+    target_include_directories(tiny-pixel-tests SYSTEM PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/libs/catch2)
+    if (TINY_PIXEL_BUILD_EXAMPLES)
+        target_sources(tiny-pixel-tests PRIVATE tests/obxf_page_test.cpp)
+        target_link_libraries(tiny-pixel-tests PRIVATE tpx-obxf-page tpx-png)
     else ()
-        target_link_libraries(to_pixels_tests PRIVATE to_pixels_default_font tpx-png)
+        target_link_libraries(tiny-pixel-tests PRIVATE tiny-pixel-default-font tpx-png)
     endif ()
-    tpx_warnings(to_pixels_tests)
+    tpx_warnings(tiny-pixel-tests)
 endif ()

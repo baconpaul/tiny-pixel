@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_CANVAS_H
-#define TO_PIXELS_CANVAS_H
+#ifndef TINY_PIXEL_CANVAS_H
+#define TINY_PIXEL_CANVAS_H
 
 #include <string_view>
 #include <vector>

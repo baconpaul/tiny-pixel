@@ -1,11 +1,11 @@
-#include "to_pixels/widgets/knob.h"
+#include "tiny-pixel/widgets/knob.h"
 
 #include <algorithm>
 #include <cmath>
 
-#include "to_pixels/canvas.h"
-#include "to_pixels/font.h"
-#include "to_pixels/root.h"
+#include "tiny-pixel/canvas.h"
+#include "tiny-pixel/font.h"
+#include "tiny-pixel/root.h"
 
 namespace tpx
 {

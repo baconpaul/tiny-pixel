@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_INPUT_H
-#define TO_PIXELS_INPUT_H
+#ifndef TINY_PIXEL_INPUT_H
+#define TINY_PIXEL_INPUT_H
 
 namespace tpx
 {

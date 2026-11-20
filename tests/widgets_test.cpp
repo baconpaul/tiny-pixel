@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 
-#include "to_pixels/to_pixels.h"
-#include "to_pixels/default_font.h"
+#include "tiny-pixel/tiny-pixel.h"
+#include "tiny-pixel/default_font.h"
 
 TEST_CASE("adjust moves the value, clamps, and reports", "[widgets]")
 {

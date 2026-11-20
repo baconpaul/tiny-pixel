@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_FONT_H
-#define TO_PIXELS_FONT_H
+#ifndef TINY_PIXEL_FONT_H
+#define TINY_PIXEL_FONT_H
 
 #include <cstddef>
 #include <cstdint>

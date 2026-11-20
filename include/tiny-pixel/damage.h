@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_DAMAGE_H
-#define TO_PIXELS_DAMAGE_H
+#ifndef TINY_PIXEL_DAMAGE_H
+#define TINY_PIXEL_DAMAGE_H
 
 #include <cstddef>
 #include <vector>

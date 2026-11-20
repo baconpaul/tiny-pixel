@@ -1,6 +1,6 @@
 #include "catch2.hpp"
 
-#include "to_pixels/damage.h"
+#include "tiny-pixel/damage.h"
 
 TEST_CASE("separate rects stay separate", "[damage]")
 {

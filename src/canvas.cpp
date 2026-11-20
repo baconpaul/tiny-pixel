@@ -1,10 +1,10 @@
-#include "to_pixels/canvas.h"
+#include "tiny-pixel/canvas.h"
 
 #include <algorithm>
 #include <cmath>
 
 #include "blend.h"
-#include "to_pixels/font.h"
+#include "tiny-pixel/font.h"
 
 namespace tpx
 {

@@ -1,7 +1,7 @@
-#include "to_pixels/widgets/label.h"
+#include "tiny-pixel/widgets/label.h"
 
-#include "to_pixels/font.h"
-#include "to_pixels/root.h"
+#include "tiny-pixel/font.h"
+#include "tiny-pixel/root.h"
 
 namespace tpx
 {

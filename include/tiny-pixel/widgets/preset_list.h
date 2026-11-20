@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_WIDGETS_PRESET_LIST_H
-#define TO_PIXELS_WIDGETS_PRESET_LIST_H
+#ifndef TINY_PIXEL_WIDGETS_PRESET_LIST_H
+#define TINY_PIXEL_WIDGETS_PRESET_LIST_H
 
 #include <functional>
 #include <string>

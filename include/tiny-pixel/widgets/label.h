@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_WIDGETS_LABEL_H
-#define TO_PIXELS_WIDGETS_LABEL_H
+#ifndef TINY_PIXEL_WIDGETS_LABEL_H
+#define TINY_PIXEL_WIDGETS_LABEL_H
 
 #include <string>
 

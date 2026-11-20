@@ -1,10 +1,10 @@
-#ifndef TO_PIXELS_EXAMPLES_OBXF_PAGE_H
-#define TO_PIXELS_EXAMPLES_OBXF_PAGE_H
+#ifndef TINY_PIXEL_EXAMPLES_OBXF_PAGE_H
+#define TINY_PIXEL_EXAMPLES_OBXF_PAGE_H
 
 #include <array>
 #include <vector>
 
-#include "to_pixels/to_pixels.h"
+#include "tiny-pixel/tiny-pixel.h"
 
 // an OB-Xf-like small-devices screen over a fake parameter set
 class ObxfPage

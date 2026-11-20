@@ -1,9 +1,9 @@
-#include "to_pixels/component.h"
+#include "tiny-pixel/component.h"
 
 #include <algorithm>
 
-#include "to_pixels/canvas.h"
-#include "to_pixels/root.h"
+#include "tiny-pixel/canvas.h"
+#include "tiny-pixel/root.h"
 
 namespace tpx
 {

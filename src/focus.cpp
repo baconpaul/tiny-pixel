@@ -1,4 +1,4 @@
-#include "to_pixels/focus.h"
+#include "tiny-pixel/focus.h"
 
 #include <algorithm>
 #include <cmath>

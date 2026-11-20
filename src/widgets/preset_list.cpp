@@ -1,10 +1,10 @@
-#include "to_pixels/widgets/preset_list.h"
+#include "tiny-pixel/widgets/preset_list.h"
 
 #include <algorithm>
 
-#include "to_pixels/canvas.h"
-#include "to_pixels/font.h"
-#include "to_pixels/root.h"
+#include "tiny-pixel/canvas.h"
+#include "tiny-pixel/font.h"
+#include "tiny-pixel/root.h"
 
 namespace tpx
 {

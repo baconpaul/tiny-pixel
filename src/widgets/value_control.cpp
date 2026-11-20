@@ -1,4 +1,4 @@
-#include "to_pixels/widgets/value_control.h"
+#include "tiny-pixel/widgets/value_control.h"
 
 #include <algorithm>
 #include <cmath>

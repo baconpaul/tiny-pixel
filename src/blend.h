@@ -1,9 +1,9 @@
-#ifndef TO_PIXELS_SRC_BLEND_H
-#define TO_PIXELS_SRC_BLEND_H
+#ifndef TINY_PIXEL_SRC_BLEND_H
+#define TINY_PIXEL_SRC_BLEND_H
 
 #include <cstdint>
 
-#include "to_pixels/color.h"
+#include "tiny-pixel/color.h"
 
 namespace tpx::detail
 {

@@ -3,9 +3,9 @@
 #include <cmath>
 
 #include "png.h"
-#include "to_pixels/canvas.h"
+#include "tiny-pixel/canvas.h"
 
-// visual review only: ./build/to_pixels_tests "[.shots]" then look at build/shots
+// visual review only: ./build/tiny-pixel-tests "[.shots]" then look at build/shots
 namespace
 {
 const auto bg0 = tpx::Color::rgb(0x14161a);
@@ -55,8 +55,8 @@ TEST_CASE("canvas primitives", "[.shots]")
     REQUIRE(tpx::png::write(img, "build/shots/canvas.png"));
 }
 
-#include "to_pixels/default_font.h"
-#include "to_pixels/font.h"
+#include "tiny-pixel/default_font.h"
+#include "tiny-pixel/font.h"
 
 TEST_CASE("text at sizes", "[.shots]")
 {
@@ -84,7 +84,7 @@ TEST_CASE("text at sizes", "[.shots]")
     REQUIRE(tpx::png::write(img, "build/shots/text.png"));
 }
 
-#include "to_pixels/to_pixels.h"
+#include "tiny-pixel/tiny-pixel.h"
 
 TEST_CASE("widgets", "[.shots]")
 {

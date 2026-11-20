@@ -1,5 +1,5 @@
-#ifndef TO_PIXELS_THEME_H
-#define TO_PIXELS_THEME_H
+#ifndef TINY_PIXEL_THEME_H
+#define TINY_PIXEL_THEME_H
 
 #include "color.h"
 

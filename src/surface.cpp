@@ -1,4 +1,4 @@
-#include "to_pixels/surface.h"
+#include "tiny-pixel/surface.h"
 
 #include <algorithm>
 
